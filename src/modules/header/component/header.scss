@@ -1,0 +1,27 @@
+.header {
+  background-image: url("../../../assets/header-bg.png");
+  height: 720px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  a {
+    font-family: Rubik, serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+
+    color: #000000;
+
+  }
+
+  &__area {
+    height: 120px;
+    background-color: rgba(255, 249, 238, 0.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 102px 0 152px;
+  }
+}

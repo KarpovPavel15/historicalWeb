@@ -1,6 +1,8 @@
+import './style.scss'
+
 import React from 'react';
-import {MainPage} from './components/MainPage';
+import { Page } from 'modules/page';
 
 export const App = () => {
-    return <MainPage/>;
+    return <Page/>;
 };
