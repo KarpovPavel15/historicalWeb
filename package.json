@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode production",
-    "dev": "webpack-dev-server --mode development --progress  --config webpack/webpack.config.dev.js --open --watch node-sass -watch scss -o css "
+    "dev": "webpack-dev-server --mode development --progress  --config webpack/webpack.config.dev.js --open --watch "
   },
   "repository": {
     "type": "git",
@@ -35,10 +35,14 @@
     "babel-loader": "^8.0.5",
     "babel-plugin-syntax-async-functions": "^6.13.0",
     "css-loader": "^3.4.2",
+    "file-loader": "^6.0.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "^4.13.1",
     "path": "^0.12.7",
     "react-dom": "^16.12.0",
+    "sass-loader": "^8.0.2",
     "ts-loader": "^6.2.1",
-    "webpack": "^4.41.6",
+    "webpack": "^4.42.1",
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.10.3"
   }
