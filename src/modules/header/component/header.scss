@@ -1,9 +1,20 @@
 .header {
-  background-image: url("../../../assets/header-bg.png");
-  height: 720px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  &__navigation {
+    height: 120px;
+    background-color: rgba(255, 249, 238, 1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 102px 0 152px;
+  }
+
+  &__image {
+    background-image: url("../../../assets/header-bg.png");
+    height: 1020px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
 
   a {
     font-family: Rubik, serif;
@@ -14,14 +25,5 @@
 
     color: #000000;
 
-  }
-
-  &__area {
-    height: 120px;
-    background-color: rgba(255, 249, 238, 0.5);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 102px 0 152px;
   }
 }
