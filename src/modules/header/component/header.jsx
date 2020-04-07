@@ -1,7 +1,7 @@
 import './header.scss'
 
 import React from 'react';
-import { Logo, Navigation } from 'shared/components';
+import { Logo, Navigation,UserOptions } from 'shared/components';
 
 export const Header = () => {
     return (
@@ -9,7 +9,7 @@ export const Header = () => {
             <div className="header__navigation">
                 <Logo/>
                 <Navigation/>
-                <div><a>userOptions</a></div>
+                <UserOptions/>
             </div>
             <div className="header__image"/>
         </header>
