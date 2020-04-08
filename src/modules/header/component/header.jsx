@@ -11,7 +11,6 @@ export const Header = () => {
                 <Navigation/>
                 <UserOptions/>
             </div>
-            <div className="header__image"/>
         </header>
 
     )

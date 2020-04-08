@@ -1,0 +1,8 @@
+.main-page {
+  &__image {
+    background-image: url("../../../assets/header-bg.png");
+    height: 1020px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
