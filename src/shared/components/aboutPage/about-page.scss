@@ -1,0 +1,28 @@
+.about-page {
+  margin: 138px 489px 146px 492px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__title {
+    font-family: Rubik, serif;
+    font-style: normal;
+    width: 850px;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 57px;
+    color: #000000;
+    text-align: center;
+  }
+
+  &__description {
+    width: 850px;
+    margin-top: 39px;
+    font-family: Lora, serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 160%;
+    color: #252525;
+  }
+}
