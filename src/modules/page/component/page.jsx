@@ -1,11 +1,12 @@
 import React from 'react'
+import { Header } from 'modules/header';
 
-export const MainPage = () => {
+export const Page = () => {
     return (
         <div>
-            <header>HEADER</header>
+            <Header/>
             <main>main</main>
             <footer>footer</footer>
         </div>
-        );
+    );
 };
