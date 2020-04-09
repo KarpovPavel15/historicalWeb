@@ -6,3 +6,9 @@
     background-repeat: no-repeat;
   }
 }
+
+@media screen and (min-width: 1700px){
+  .main-page__image{
+    background-size: cover;
+  }
+}
