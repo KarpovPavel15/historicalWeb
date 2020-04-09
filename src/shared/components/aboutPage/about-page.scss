@@ -1,8 +1,9 @@
 .about-page {
-  margin: 138px 489px 146px 492px;
+  padding: 138px 489px 146px 492px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
 
   &__title {
     font-family: Rubik, serif;
