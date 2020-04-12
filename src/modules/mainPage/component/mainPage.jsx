@@ -4,13 +4,7 @@ import React from 'react'
 import { AboutPage, AboutWorkers, Persons, TourRoutes } from 'shared/components';
 import { Route1, Route2, Route3, Route4 } from 'assets/routes';
 
-import Worker1 from 'assets/Worker1.png'
-import Worker2 from 'assets/Worker2.png'
-import Worker3 from 'assets/Worker3.png'
-import Worker4 from 'assets/Worker4.png'
-import Worker5 from 'assets/Worker5.png'
-import Worker6 from 'assets/Worker6.png'
-import Worker7 from 'assets/Worker7.png'
+import { Worker1, Worker2, Worker3, Worker4, Worker5, Worker6, Worker7 } from 'assets/workers'
 
 const routesList = [
     {
