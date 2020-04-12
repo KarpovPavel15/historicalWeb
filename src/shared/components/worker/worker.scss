@@ -1,0 +1,24 @@
+.worker {
+  margin-right: 63px;
+
+  &__image {
+    margin-bottom: 40px;
+  }
+
+  &__scope {
+    margin-bottom: 48px;
+  }
+
+  &__name, &__scope {
+    display: flex;
+    justify-content: center;
+    font-family: Lora, serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 31px;
+    text-align: center;
+
+    color: #000000;
+  }
+}

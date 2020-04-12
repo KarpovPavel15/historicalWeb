@@ -1,8 +1,16 @@
 import './main-page.scss'
 
 import React from 'react'
-import { AboutPage, Persons, TourRoutes } from 'shared/components';
+import { AboutPage, AboutWorkers, Persons, TourRoutes } from 'shared/components';
 import { Route1, Route2, Route3, Route4 } from 'assets/routes';
+
+import Worker1 from 'assets/Worker1.png'
+import Worker2 from 'assets/Worker2.png'
+import Worker3 from 'assets/Worker3.png'
+import Worker4 from 'assets/Worker4.png'
+import Worker5 from 'assets/Worker5.png'
+import Worker6 from 'assets/Worker6.png'
+import Worker7 from 'assets/Worker7.png'
 
 const routesList = [
     {
@@ -54,6 +62,44 @@ const routesList2 = [
         name: 'Маршрут 8',
         description: 'Гістарычны цэнтр горада 8'
     }];
+const workersList = [
+    {
+        id: 1,
+        img: Worker1,
+        name: 'Name',
+        scope: 'Dev'
+    }, {
+        id: 2,
+        img: Worker2,
+        name: 'Name',
+        scope: 'Dis'
+    }, {
+        id: 3,
+        img: Worker3,
+        name: 'Name',
+        scope: 'Test'
+    }, {
+        id: 4,
+        img: Worker4,
+        name: 'Name',
+        scope: 'Dev'
+    }, {
+        id: 5,
+        img: Worker5,
+        name: 'Name',
+        scope: 'Dev'
+    }, {
+        id: 6,
+        img: Worker6,
+        name: 'Name',
+        scope: 'Dev'
+    }, {
+        id: 7,
+        img: Worker7,
+        name: 'Name',
+        scope: 'Dev'
+    },
+];
 
 
 export const MainPage = () => {
@@ -65,7 +111,7 @@ export const MainPage = () => {
             <TourRoutes routesList={routesList}/>
             <Persons/>
             <TourRoutes routesList={routesList2}/>
-            {/*<Workers/>*/}
+            <AboutWorkers workersList={workersList}/>
         </main>
     );
 };
