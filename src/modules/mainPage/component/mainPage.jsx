@@ -2,8 +2,8 @@ import './main-page.scss'
 
 import React from 'react'
 import { AboutPage, AboutWorkers, Persons, TourRoutes } from 'shared/components';
-import { Route1, Route2, Route3, Route4 } from 'assets/routes';
 
+import { Route1, Route2, Route3, Route4 } from 'assets/routes';
 import { Worker1, Worker2, Worker3, Worker4, Worker5, Worker6, Worker7 } from 'assets/workers'
 
 const routesList = [
