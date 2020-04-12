@@ -15,6 +15,11 @@ export const TourRoutes = ({routesList}) => (
     </div>
 );
 
-TourRoutes.propTypes={
-    routesList: PropTypes.arrayOf.isRequired
+TourRoutes.propTypes = {
+    routesList: PropTypes.arrayOf(
+        PropTypes.shape({
+            img: PropTypes.string,
+            name: PropTypes.string,
+            scope: PropTypes.string
+        })).isRequired
 };

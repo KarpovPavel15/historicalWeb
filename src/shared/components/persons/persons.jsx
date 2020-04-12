@@ -16,5 +16,10 @@ export const Persons = ({personsList}) => (
 );
 
 Persons.propTypes = {
-    personsList: PropTypes.arrayOf.isRequired
+    personsList: PropTypes.arrayOf(
+        PropTypes.shape({
+            img: PropTypes.string,
+            name: PropTypes.string,
+            scope: PropTypes.string
+        })).isRequired
 };

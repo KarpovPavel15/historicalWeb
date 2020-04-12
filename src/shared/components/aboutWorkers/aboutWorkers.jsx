@@ -23,5 +23,10 @@ export const AboutWorkers = ({workersList}) => (
 
 );
 AboutWorkers.propTypes = {
-    workersList: PropTypes.arrayOf.isRequired
+    workersList: PropTypes.arrayOf(
+        PropTypes.shape({
+            img: PropTypes.string,
+            name: PropTypes.string,
+            scope: PropTypes.string
+        })).isRequired
 };
