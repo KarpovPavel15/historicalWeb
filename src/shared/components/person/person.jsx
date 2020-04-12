@@ -14,6 +14,7 @@ export const Person = ({person}) => (
 
 Person.propTypes = {
     person: PropTypes.shape({
+        img: PropTypes.string,
         name: PropTypes.string,
         description: PropTypes.string
     })
