@@ -2,10 +2,7 @@ import './main-page.scss'
 
 import React from 'react'
 import { AboutPage, Persons, TourRoutes } from 'shared/components';
-import Route1 from 'assets/Route1.png';
-import Route2 from 'assets/Route2.png';
-import Route3 from 'assets/Route3.png';
-import Route4 from 'assets/Route4.png';
+import { Route1, Route2, Route3, Route4 } from 'assets/routes';
 
 const routesList = [
     {
