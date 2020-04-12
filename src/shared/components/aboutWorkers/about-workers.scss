@@ -1,0 +1,23 @@
+.about-workers {
+  margin-bottom: 200px;
+
+  &__title {
+    font-family: Rubik, serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 57px;
+    color: #232323;
+    padding: 144px 657px 74px 657px;
+  }
+
+  &__information {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__first-line, &__second-line {
+    display: flex;
+    justify-content: center;
+  }
+}

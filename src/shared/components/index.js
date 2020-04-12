@@ -6,4 +6,6 @@ export * from './userOptions'
 export * from './aboutPage'
 export * from './tourRoute'
 export * from './tourRoutes'
+export * from './aboutWorkers'
+export * from './worker'
 
