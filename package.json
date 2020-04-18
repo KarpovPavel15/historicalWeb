@@ -22,7 +22,8 @@
     "react-router-dom": "^5.0.0",
     "react-scripts": "^3.0.1",
     "history": "^4.10.1",
-    "prop-types": "latest"
+    "prop-types": "latest",
+    "react-slick": "latest"
   },
   "devDependencies": {
     "@babel/core": "^7.4.3",

@@ -1,8 +1,8 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Users\Admin\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js install
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add react-slick
 
 PATH: 
-  C:\Ruby26-x64\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\nodejs\;C:\Program Files (x86)\Yarn\bin\;C:\Program Files\Git\cmd;C:\Program Files (x86)\Wolfram Research\WolframScript\;C:\Users\Admin\AppData\Local\Programs\Python\Python37\Scripts\;C:\Users\Admin\AppData\Local\Programs\Python\Python37\;C:\Users\Admin\AppData\Local\Microsoft\WindowsApps;;D:\PhpStorm 2019.1.2\bin;;C:\Users\Admin\AppData\Roaming\npm;C:\Users\Admin\AppData\Local\Yarn\bin
+  D:\HISTORICAL\node_modules\.bin;C:\Ruby26-x64\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\nodejs\;C:\Program Files (x86)\Yarn\bin\;C:\Program Files\Git\cmd;C:\Program Files (x86)\Wolfram Research\WolframScript\;C:\Users\Admin\AppData\Local\Programs\Python\Python37\Scripts\;C:\Users\Admin\AppData\Local\Programs\Python\Python37\;C:\Users\Admin\AppData\Local\Microsoft\WindowsApps;;D:\PhpStorm 2019.1.2\bin;;C:\Users\Admin\AppData\Roaming\npm;C:\Users\Admin\AppData\Local\Yarn\bin
 
 Yarn version: 
   1.16.0
@@ -34,16 +34,16 @@ npm manifest:
     "license": "ISC",
     "homepage": "https://bitbucket.org/KarpovPV/training#readme",
     "dependencies": {
+      "html-webpack-plugin": "^3.2.0",
       "@babel/runtime": "^7.8.4",
       "react": "^16.12.0",
-      "webpack-merge": "^4.2.2",
       "react-dom": "^16.8.6",
       "react-router-dom": "^5.0.0",
       "react-scripts": "^3.0.1",
-      "history": "^4.10.1"
+      "history": "^4.10.1",
+      "prop-types": "latest"
     },
     "devDependencies": {
-      "html-webpack-plugin": "^3.2.0",
       "@babel/core": "^7.4.3",
       "@babel/node": "^7.2.2",
       "@babel/plugin-proposal-class-properties": "^7.4.0",
@@ -64,7 +64,8 @@ npm manifest:
       "ts-loader": "^6.2.1",
       "webpack": "^4.42.1",
       "webpack-cli": "^3.3.11",
-      "webpack-dev-server": "^3.10.3"
+      "webpack-dev-server": "^3.10.3",
+      "webpack-merge": "^4.2.2"
     }
   }
 
