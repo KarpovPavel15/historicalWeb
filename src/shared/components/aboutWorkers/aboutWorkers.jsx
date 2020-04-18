@@ -10,12 +10,12 @@ export const AboutWorkers = ({workersList}) => (
         <div className="about-workers__information">
             <div className="about-workers__first-line">
                 {
-                    workersList.map(element => element.id < 5 ? <Worker workerInfo={element}/> : null)
+                    workersList.map(element => element.id < 5 ? <Worker workerInfo={element} key={element.id}/> : null)
                 }
             </div>
             <div className="about-workers__second-line">
                 {
-                    workersList.map(element => element.id > 4 ? <Worker workerInfo={element}/> : null)
+                    workersList.map(element => element.id > 4 ? <Worker workerInfo={element} key={element.id}/> : null)
                 }
             </div>
         </div>
