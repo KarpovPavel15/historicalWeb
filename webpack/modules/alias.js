@@ -4,8 +4,9 @@ module.exports = {
     resolve: {
         alias: {
             modules: utils.resolve('src/modules'),
+            shared: utils.resolve('src/shared'),
             $assets: utils.resolve('src/assets'),
-            rootRoutes: utils.resolve('src/rootRoute')
+            rootRoute: utils.resolve('src/rootRoute'),
         }
     }
 };

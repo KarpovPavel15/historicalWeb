@@ -1,12 +1,14 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
+import { MainPage } from 'modules/mainPage';
 
 
 export const RootRoute = () => (
     <Switch>
-        <Route path="route1" component="component1"/>
-        <Route path="route2" component="component2"/>
-        <Route path="route3" component="component3"/>
-        <Route path="route4" component="component4"/>
+        <Route exact path='/' component={MainPage}/>
+        <Route path="/route1" render={() => <div>Route</div>}/>
+        <Route path="/route2" render={() => <div>Persones</div>}/>
+        <Route path="/route3" render={() => <div>Team</div>}/>
+        <Route path="/route4" render={() => <div>Souvenirs</div>}/>
     </Switch>
 );

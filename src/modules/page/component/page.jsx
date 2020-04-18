@@ -1,6 +1,6 @@
 import React from 'react'
 import { Header } from 'modules/header';
-import { RootRoute } from 'rootRoutes';
+import { RootRoute } from 'rootRoute';
 
 export const Page = () => {
     return (
