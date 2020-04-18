@@ -1,5 +1,6 @@
 .user-options {
   display: flex;
+  align-items: center;
 
   &__language {
     margin-right: 50px;
@@ -13,12 +14,30 @@
     background: transparent;
     border: none;
     outline: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+
+    &:hover {
+      cursor: pointer;
+      color: #4d4c66;
+    }
+
+    option {
+      font-family: Rubik, serif;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 12px;
+      color: #000000;
+    }
   }
+
 
   &__main {
     align-items: center;
     display: flex;
-    button{
+
+    button {
       background: transparent;
       border: none;
       outline: none;

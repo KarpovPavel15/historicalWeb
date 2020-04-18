@@ -8,7 +8,11 @@ import React from 'react';
 export const UserOptions = () => {
     return (
         <div className="user-options">
-            <button className="user-options__language">РУС</button>
+            <select className="user-options__language">
+                <option value="blr">BLR</option>
+                <option value="pl">PL</option>
+                <option value="en" selected>ENG</option>
+            </select>
             <div className="options user-options__main">
                 <button className="options__search">
                     <img src={search}/>
