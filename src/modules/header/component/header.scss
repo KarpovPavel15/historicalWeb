@@ -1,4 +1,11 @@
 .header {
+  height: 135px;
+  background-color: #fff9ee;
+
+  &__slider {
+    padding: 15px 55px 15px 55px;
+  }
+
   &__navigation {
     height: 120px;
     background-color: rgba(255, 249, 238, 1);
@@ -18,7 +25,57 @@
     margin-right: 50px;
     color: #000000;
   }
-  a:last-child{
+
+  a:last-child {
     margin-right: 0;
   }
+}
+
+.slick-slider {
+  padding: 0 40px 0 40px;
+  height: 200px;
+  background-color: burlywood;
+}
+
+.slick-list {
+  height: 100%;
+}
+
+.slick-track {
+  width: 346px;
+  opacity: 1;
+  height: 100%;
+  transform: translate3d(0px, 0px, 0px);
+}
+
+.slick-slide {
+  outline: none;
+  width: 346px;
+  height: 100%;
+
+  img {
+    display: block;
+    height: 150px;
+  }
+}
+
+.slick-active {
+  outline: none;
+  width: 318px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slick-prev {
+  left: 10px;
+}
+
+.slick-next {
+  right: 10px;
+}
+
+.slick-initialized .slick-slide {
+  display: flex;
+  align-items: center;
 }

@@ -1,4 +1,8 @@
 .person {
+  height: 200px;
+  display: flex;
+  width: auto;
+
   &__name {
     font-family: Rubik, serif;
     font-style: normal;
