@@ -15,14 +15,15 @@
   "license": "ISC",
   "homepage": "https://bitbucket.org/KarpovPV/training#readme",
   "dependencies": {
-    "html-webpack-plugin": "^3.2.0",
     "@babel/runtime": "^7.8.4",
+    "axios": "^0.19.2",
+    "history": "^4.10.1",
+    "html-webpack-plugin": "^3.2.0",
+    "prop-types": "latest",
     "react": "^16.12.0",
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.0",
     "react-scripts": "^3.0.1",
-    "history": "^4.10.1",
-    "prop-types": "latest",
     "react-slick": "latest"
   },
   "devDependencies": {
@@ -32,6 +33,7 @@
     "@babel/plugin-transform-runtime": "^7.5.5",
     "@babel/preset-env": "^7.7.5",
     "@babel/preset-react": "^7.7.4",
+    "axios-mock-adapter": "^1.18.1",
     "babel-eslint": "^10.0.3",
     "babel-jest": "^24.9.0",
     "babel-loader": "^8.0.5",
