@@ -11,7 +11,7 @@ export const UserOptions = () => {
             <select className="user-options__language">
                 <option value="blr">BLR</option>
                 <option value="pl">PL</option>
-                <option value="en" selected>ENG</option>
+                <option value="en">ENG</option>
             </select>
             <div className="options user-options__main">
                 <button className="options__search">

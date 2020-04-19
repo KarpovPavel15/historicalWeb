@@ -55,11 +55,9 @@ export const Header = () => {
                 </div>
                 <div className="header__slider">
                     {isActive &&
-                    <Slider {...settings}>{personsListForSlider.map(element => <Person person={element} personForSlider={isActive}/>)}</Slider>}
+                    <Slider {...settings}>{personsListForSlider.map(element => <Person key={element.id} person={element} personForSlider={isActive}/>)}</Slider>}
                 </div>
             </div>
         </header>
-
-
     )
 };

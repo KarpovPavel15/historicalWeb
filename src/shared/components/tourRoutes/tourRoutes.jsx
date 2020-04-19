@@ -9,7 +9,7 @@ export const TourRoutes = ({routesList}) => (
         <h1 className="tour-routes__title">Турыстычныя маршруты</h1>
         <div className="tour-routes__list">
             {
-                routesList.map(element => <TourRoute tourInfo={element}/>)
+                routesList.map(element => <TourRoute tourInfo={element} key={element.id}/>)
             }
         </div>
     </div>
