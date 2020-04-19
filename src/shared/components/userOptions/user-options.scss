@@ -4,10 +4,9 @@
 
   &__language {
     margin-right: 50px;
-    font-family: Rubik, serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 24px;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    font-size: 23px;
     line-height: 28px;
     text-decoration: none;
     color: #000000;
@@ -20,7 +19,7 @@
 
     &:hover {
       cursor: pointer;
-      color: #4d4c66;
+      color: #0000008f;
     }
 
     option {
@@ -31,7 +30,6 @@
       color: #000000;
     }
   }
-
 
   &__main {
     align-items: center;
