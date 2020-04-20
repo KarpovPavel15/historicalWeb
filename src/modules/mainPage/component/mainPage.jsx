@@ -32,31 +32,36 @@ const routesList = [
         name: 'Маршрут 4',
         description: 'Гістарычны цэнтр горада 4'
     }];
-const routesList2 = [
+export const routesListForSlider = [
     {
         id: 1,
         img: Route1,
-        name: 'Маршрут 5',
-        description: 'Гістарычны цэнтр горада 5'
+        name: 'Маршрут 1',
     },
     {
         id: 2,
         img: Route2,
-        name: 'Маршрут 6',
-        description: 'Гістарычны цэнтр горада 6'
+        name: 'Маршрут 2',
     },
     {
         id: 3,
         img: Route3,
-        name: 'Маршрут 7',
-        description: 'Гістарычны цэнтр горада 7'
+        name: 'Маршрут 3',
     },
     {
         id: 4,
         img: Route4,
-        name: 'Маршрут 8',
-        description: 'Гістарычны цэнтр горада 8'
+        name: 'Маршрут 4',
+    }, {
+        id: 5,
+        img: Route4,
+        name: 'Маршрут 5',
+    }, {
+        id: 6,
+        img: Route4,
+        name: 'Маршрут 5',
     }];
+
 const workersList = [
     {
         id: 1,
@@ -93,6 +98,37 @@ const workersList = [
         img: Worker7,
         name: 'Name',
         scope: 'Dev'
+    },
+];
+export const workersListForSlider = [
+    {
+        id: 1,
+        img: Worker1,
+        name: 'Name',
+    }, {
+        id: 2,
+        img: Worker2,
+        name: 'Name',
+    }, {
+        id: 3,
+        img: Worker3,
+        name: 'Name',
+    }, {
+        id: 4,
+        img: Worker4,
+        name: 'Name',
+    }, {
+        id: 5,
+        img: Worker5,
+        name: 'Name',
+    }, {
+        id: 6,
+        img: Worker6,
+        name: 'Name',
+    }, {
+        id: 7,
+        img: Worker7,
+        name: 'Name',
     },
 ];
 const personsList = [
@@ -170,7 +206,7 @@ export const MainPage = () => {
             <Persons personsList={personsList}/>
             <TourRoutes routesList={routesList}/>
             <Persons personsList={personsList}/>
-            <TourRoutes routesList={routesList2}/>
+            <TourRoutes routesList={routesList}/>
             <AboutWorkers workersList={workersList}/>
         </main>
     );
