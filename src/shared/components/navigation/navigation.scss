@@ -1,14 +1,14 @@
 .header {
   &__navigation {
     .navigation {
-      margin-left: 10px;
+      margin-left: 50px;
 
       &__rout-link, &__genius-link, &__team-link, &__souvenirs-link {
         font-family: 'Roboto', sans-serif;
         font-weight: bold;
         font-size: 23px;
         text-decoration: none;
-        margin-right: 10px;
+        margin-right: 50px;
         color: #000000;
 
         &:last-child {
