@@ -8,4 +8,5 @@ export * from './tourRoute'
 export * from './tourRoutes'
 export * from './aboutWorkers'
 export * from './worker'
+export * from './select'
 
