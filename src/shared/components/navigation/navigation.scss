@@ -1,25 +1,21 @@
-.header {
-  &__navigation {
-    .navigation {
-      margin-left: 50px;
+.navigation {
+  margin-left: 10px;
 
-      &__rout-link, &__genius-link, &__team-link, &__souvenirs-link {
-        font-family: 'Roboto', sans-serif;
-        font-weight: bold;
-        font-size: 23px;
-        text-decoration: none;
-        margin-right: 50px;
-        color: #000000;
+  &__rout-link, &__genius-link, &__team-link, &__souvenirs-link {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 23px;
+    text-decoration: none;
+    margin-right: 50px;
+    color: #000000;
 
-        &:last-child {
-          margin-right: 0;
-        }
+    &:last-child {
+      margin-right: 0;
+    }
 
-        &:hover {
-          color: #0000008f;
-        }
-      }
-
+    &:hover {
+      color: #0000008f;
     }
   }
+
 }
