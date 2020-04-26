@@ -1,6 +1,9 @@
 .header {
   height: 135px;
   background-color: #fff9ee;
+  position: fixed;
+  left: 0;
+  right: 0;
 
   &__slider {
     padding: 15px 55px 15px 55px;
