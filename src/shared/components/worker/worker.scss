@@ -22,3 +22,14 @@
     color: #000000;
   }
 }
+
+.worker-slide{
+  width: 380px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+}
+

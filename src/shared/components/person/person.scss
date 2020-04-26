@@ -26,3 +26,14 @@
     color: #252525;
   }
 }
+
+.person-slider{
+  width: 380px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+}
+
