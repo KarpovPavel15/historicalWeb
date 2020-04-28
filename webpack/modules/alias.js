@@ -7,6 +7,8 @@ module.exports = {
             shared: utils.resolve('src/shared'),
             $assets: utils.resolve('src/assets'),
             rootRoute: utils.resolve('src/rootRoute'),
+            api: utils.resolve('src/api'),
+            utils: utils.resolve('src/utils'),
         }
     }
 };

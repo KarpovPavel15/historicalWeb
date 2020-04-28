@@ -1,7 +1,8 @@
 import './header.scss'
 
 import React, { useState } from 'react';
-import { Logo, Navigation, Sliders, UserOptions } from 'shared/components';
+import { Logo, Navigation, Sliders } from 'shared/components';
+import { default as UserOptions } from 'modules/userOptions';
 
 export const Header = () => {
 

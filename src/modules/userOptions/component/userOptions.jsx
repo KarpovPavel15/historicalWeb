@@ -5,22 +5,9 @@ import hamburger from 'assets/hamburger.png'
 
 import React from 'react';
 import { Select } from 'shared/components';
+import PropTypes from 'prop-types';
 
-export const UserOptions = () => {
-    const languages = [
-        {
-            id: 1,
-            content: 'BLR'
-        },
-        {
-            id: 2,
-            content: 'ENG'
-        },
-        {
-            id: 3,
-            content: 'RUS'
-        }
-    ];
+export const UserOptions = ({languages}) => {
     return (
         <div className="user-options">
             <Select className="user-options__language">{languages}</Select>
@@ -37,4 +24,15 @@ export const UserOptions = () => {
             </div>
         </div>
     )
+};
+
+UserOptions.propTypes = {
+    languages: PropTypes.arrayOf(PropTypes.shape({
+        id: PropTypes.number,
+        content: PropTypes.string
+    }))
+};
+
+UserOptions.defaultProps = {
+    languages: []
 };
