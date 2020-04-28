@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 export default function UserOptionsContainer() {
     const dispatch = useDispatch();
     const {languages} = useSelector(state => state);
-    
+
     useEffect(() => {
         dispatch(setWorkersRequestAction());
     }, []);
