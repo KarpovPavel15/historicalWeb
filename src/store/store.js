@@ -3,10 +3,11 @@ import rootReducer from './reducers';
 import createSagaMiddleware from 'redux-saga';
 
 import { composeWithDevTools } from 'redux-devtools-extension';
-import { sagasUserOptions } from 'modules';
+import { sagasUserOptions, sagaMainPage } from 'modules';
 
 const sagas = [
-    sagasUserOptions
+    sagasUserOptions,
+    sagaMainPage
 ];
 
 export const configureStore = () => {

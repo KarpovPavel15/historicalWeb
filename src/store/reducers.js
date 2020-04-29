@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
-import { reducerLanguage } from 'modules/userOptions';
-
+import { reducerLanguage,reducerMainPage } from 'modules';
 
 export default combineReducers({
-    languages:reducerLanguage
+    languages: reducerLanguage,
+    homePageContent: reducerMainPage
 });

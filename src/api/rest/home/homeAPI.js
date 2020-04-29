@@ -12,4 +12,16 @@ export const homeAPI = {
     mockHomeAPI.getLanguages();
     return instance.get("/");
   },
+  getRoutesList: () => {
+    mockHomeAPI.getRoutesList();
+    return instance.get("/");
+  },
+  getWorkersList: () => {
+    mockHomeAPI.getWorkersList();
+    return instance.get("/");
+  },
+  getPersonsList: () => {
+    mockHomeAPI.getPersonsList();
+    return instance.get("/");
+  },
 };

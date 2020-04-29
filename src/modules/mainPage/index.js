@@ -1,1 +1,5 @@
 export * from './component'
+export { default } from './mainPageContainer'
+export * from './actions'
+export * from './reducer'
+export * from './sagas'
