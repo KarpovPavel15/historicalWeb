@@ -4,11 +4,12 @@ import { useDispatch, useSelector } from 'react-redux';
 
 export default function MainPageContainer() {
     const dispatch = useDispatch();
-    const {personsList, routesList, workersList} = useSelector(state => state.homePageContent);
+    const {personsList, routesList, workersList, aboutHomePage} = useSelector(state => state.homePageContent);
 
     useEffect(() => {
         dispatch(setMainPageContentRequestAction())
     }, []);
 
-    return <MainPage personsList={personsList} routesList={routesList} workersList={workersList}/>
+    return <MainPage personsList={personsList} routesList={routesList} workersList={workersList}
+                     aboutHomePage={aboutHomePage}/>
 }

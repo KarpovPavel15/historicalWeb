@@ -11,7 +11,8 @@ export const reducerMainPage = (state = initialState, action) => {
                 ...state,
                 personsList: [...action.personsList],
                 routesList: [...action.routesList],
-                workersList: [...action.workersList]
+                workersList: [...action.workersList],
+                aboutHomePage: [...action.aboutHomePage]
             };
         default:
             return state;

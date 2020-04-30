@@ -5,11 +5,11 @@ import { AboutPage, AboutWorkers, Persons, TourRoutes } from 'shared/components'
 import PropTypes from 'prop-types';
 
 
-export const MainPage = ({personsList,routesList,workersList}) => {
+export const MainPage = ({personsList,routesList,workersList,aboutHomePage}) => {
     return (
         <main className="main-page">
             <div className="main-page__image"/>
-            <AboutPage/>
+            <AboutPage aboutHomePage={aboutHomePage}/>
             <Persons personsList={personsList}/>
             <TourRoutes routesList={routesList}/>
             <Persons personsList={personsList}/>
@@ -37,6 +37,10 @@ MainPage.propTypes={
         img: PropTypes.string,
         name: PropTypes.string,
         scope: PropTypes.string
+    })),
+    aboutHomePage: PropTypes.arrayOf(PropTypes.shape({
+        id: PropTypes.number,
+        content: PropTypes.string
     }))
 };
 
@@ -44,4 +48,5 @@ MainPage.defaultProps={
     personsList: [],
     routesList: [],
     workersList: [],
+    aboutHomePage: [],
 };

@@ -1,29 +1,26 @@
 import './about-page.scss'
 
 import React from 'react';
+import PropTypes from 'prop-types';
 
-export const AboutPage = () => {
+export const AboutPage = ({aboutHomePage}) => {
     return (
         <div className="about-page">
             <h1 className="about-page__title">Пра аповед</h1>
             <div className="about-page__description">
-                <p>Яны былі людзьмі адной эпохі. Абое прайшлі праз выпрабаванні Студзеньскага
-                    паўстання 1863-64 гадоў. Абое прысвяцілі сябе пісьменніцтву. Напэўна, такое
-                    падабенства лёсаў і паспрыяла іх сяброўству.</p>
-
-                <p>Яны пазнаёміліся ў студзені 1887 года. Ён прыехаў з Вільні ў Гродна, каб асабіста
-                    ўбачыць знакамітую пісьменніцу. Трохі пазней Ажэшка так апісвала гэту
-                    сустрэчу: “Вельмі прыемна правяла з ім некалькі гадзін. Ён чытаў мне свае
-                    беларускія творы і даў мне нават іх копію з асобным вершыкам, так сама
-                    па-беларуску, да мяне ці для мяне. Ці няпраўда, гэта вельмі прыгожыя рэчы,
-                    маюць яны нейкую асаблівую прывабнасць...”.</p>
-
-                <p>Другі раз яны сустрэліся ў Гродне ў снежні 1887 года. З гэтага часу паміж імі завязалася сяброўства.
-                    Яны
-                    ліставаліся, часта наведвалі адзін аднаго. Ён бываў частым госцем ў доме Ажэшкі каля Сеннай плошчы,
-                    а з
-                    1895 г. заяжджаў і ў дом Станіслава Нагорскага на Садовай вуліцы.</p>
+                {aboutHomePage.map(element => <p key={element.id}>{element.content}</p>)}
             </div>
         </div>
     )
+};
+
+AboutPage.propTypes = {
+    aboutHomePage: PropTypes.arrayOf(PropTypes.shape({
+        id: PropTypes.number,
+        content: PropTypes.string
+    }))
+};
+
+AboutPage.defaultProps = {
+    aboutHomePage: []
 };

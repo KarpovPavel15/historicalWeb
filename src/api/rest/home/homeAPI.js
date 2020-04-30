@@ -21,4 +21,8 @@ export const homeAPI = {
     mockHomeAPI.getPersonsList();
     return instance.get("/");
   },
+  getAboutHomePage: () => {
+    mockHomeAPI.getAboutHomePage();
+    return instance.get("/");
+  },
 };
