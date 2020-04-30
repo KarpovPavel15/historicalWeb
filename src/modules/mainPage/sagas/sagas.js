@@ -1,5 +1,5 @@
 import { call, put, takeLatest } from 'redux-saga/effects';
-import { API } from 'api/rest';
+import { API } from 'api/rest/API';
 import { setMainPageContentSuccessAction } from 'modules/mainPage';
 
 function* setMainPageContent() {
