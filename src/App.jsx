@@ -1,15 +1,20 @@
 import './style.scss'
 
 import React from 'react';
-import { Page } from 'modules/page';
 import { Router } from 'react-router-dom';
 import { createBrowserHistory } from 'history';
+import { Provider } from 'react-redux';
+import { store } from 'store';
+
+import { Page } from 'modules/page';
 
 export const App = () => {
     const customHistory = createBrowserHistory();
     return (
-        <Router history={customHistory}>
-            <Page/>
-        </Router>
+        <Provider store={store}>
+            <Router history={customHistory}>
+                <Page/>
+            </Router>
+        </Provider>
     )
 };
