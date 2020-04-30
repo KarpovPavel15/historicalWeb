@@ -8,10 +8,7 @@ export const instance = axios.create({
 });
 
 export const homeAPI = {
-  getLanguages: () => {
-    mockHomeAPI.getLanguages();
-    return instance.get("/");
-  },
+  getLanguages: () => mockHomeAPI.getLanguages(),
   getRoutesList: () => {
     mockHomeAPI.getRoutesList();
     return instance.get("/");

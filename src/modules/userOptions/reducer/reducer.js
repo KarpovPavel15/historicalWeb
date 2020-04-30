@@ -1,8 +1,8 @@
 export const reducerLanguage = (state = [], action) => {
     switch (action.type) {
-        case 'SET_WORKERS_SUCCESS' :
+        case 'SET_LANGUAGE_LIST_SUCCESS' :
             return [
-                ...action.data
+                ...action[4]
             ];
         default:
             return state;

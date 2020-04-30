@@ -1,16 +1,16 @@
 import { all, call, put, takeLatest } from 'redux-saga/effects';
 import { API } from 'api/rest/API';
-import { setWorkersSuccessAction } from 'modules/userOptions';
+import { setLanguageListSuccessAction } from '../actions';
 
-function* setWorkerSaga() {
+function* setLanguageSaga() {
     const languages = yield call(API.homeAPI.getLanguages);
-    yield put(setWorkersSuccessAction(languages))
+    yield put(setLanguageListSuccessAction(languages.handlers.get[0]))
 }
 
 export function* sagasUserOptions() {
     yield all(
         [
-            takeLatest('SET_WORKERS_REQUEST', setWorkerSaga)
+            takeLatest('SET_LANGUAGE_LIST_REQUEST', setLanguageSaga)
         ]
     );
 }

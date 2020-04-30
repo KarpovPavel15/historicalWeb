@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { setWorkersRequestAction, UserOptions } from 'modules/userOptions';
+import { setLanguageListRequestAction, UserOptions } from 'modules/userOptions';
 import { useDispatch, useSelector } from 'react-redux';
 
 export default function UserOptionsContainer() {
@@ -7,7 +7,7 @@ export default function UserOptionsContainer() {
     const {languages} = useSelector(state => state);
 
     useEffect(() => {
-        dispatch(setWorkersRequestAction());
+        dispatch(setLanguageListRequestAction());
     }, []);
 
     return <UserOptions languages={languages}/>
