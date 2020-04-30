@@ -2,207 +2,14 @@ import './main-page.scss'
 
 import React from 'react'
 import { AboutPage, AboutWorkers, Persons, TourRoutes } from 'shared/components';
+import PropTypes from 'prop-types';
 
-import { Route1, Route2, Route3, Route4 } from 'assets/routes';
-import { Person1, Person2, Person3, Person4 } from 'assets/persones';
-import { Worker1, Worker2, Worker3, Worker4, Worker5, Worker6, Worker7 } from 'assets/workers'
 
-const routesList = [
-    {
-        id: 1,
-        img: Route1,
-        name: 'Маршрут 1',
-        description: 'Гістарычны цэнтр горада 1'
-    },
-    {
-        id: 2,
-        img: Route2,
-        name: 'Маршрут 2',
-        description: 'Гістарычны цэнтр горада 2'
-    },
-    {
-        id: 3,
-        img: Route3,
-        name: 'Маршрут 3',
-        description: 'Гістарычны цэнтр горада 3'
-    },
-    {
-        id: 4,
-        img: Route4,
-        name: 'Маршрут 4',
-        description: 'Гістарычны цэнтр горада 4'
-    }];
-export const routesListForSlider = [
-    {
-        id: 1,
-        img: Route1,
-        name: 'Маршрут 1',
-    },
-    {
-        id: 2,
-        img: Route2,
-        name: 'Маршрут 2',
-    },
-    {
-        id: 3,
-        img: Route3,
-        name: 'Маршрут 3',
-    },
-    {
-        id: 4,
-        img: Route4,
-        name: 'Маршрут 4',
-    }, {
-        id: 5,
-        img: Route4,
-        name: 'Маршрут 5',
-    }, {
-        id: 6,
-        img: Route4,
-        name: 'Маршрут 5',
-    }];
-
-const workersList = [
-    {
-        id: 1,
-        img: Worker1,
-        name: 'Name',
-        scope: 'Dev'
-    }, {
-        id: 2,
-        img: Worker2,
-        name: 'Name',
-        scope: 'Dis'
-    }, {
-        id: 3,
-        img: Worker3,
-        name: 'Name',
-        scope: 'Test'
-    }, {
-        id: 4,
-        img: Worker4,
-        name: 'Name',
-        scope: 'Dev'
-    }, {
-        id: 5,
-        img: Worker5,
-        name: 'Name',
-        scope: 'Dev'
-    }, {
-        id: 6,
-        img: Worker6,
-        name: 'Name',
-        scope: 'Dev'
-    }, {
-        id: 7,
-        img: Worker7,
-        name: 'Name',
-        scope: 'Dev'
-    },
-];
-export const workersListForSlider = [
-    {
-        id: 1,
-        img: Worker1,
-        name: 'Name',
-    }, {
-        id: 2,
-        img: Worker2,
-        name: 'Name',
-    }, {
-        id: 3,
-        img: Worker3,
-        name: 'Name',
-    }, {
-        id: 4,
-        img: Worker4,
-        name: 'Name',
-    }, {
-        id: 5,
-        img: Worker5,
-        name: 'Name',
-    }, {
-        id: 6,
-        img: Worker6,
-        name: 'Name',
-    }, {
-        id: 7,
-        img: Worker7,
-        name: 'Name',
-    },
-];
-const personsList = [
-    {
-        id: 1,
-        img: Person1,
-        name: 'Элаіза Ажэшка',
-        description: 'Яны былі людзьмі адной эпохі. Абое прайшлі праз выпрабаванні Студзеньскага паўстання 1863-64 гадоў. Абое прысвяцілі сябе пісьменніцтву.'
-    }, {
-        id: 7,
-        img: Person1,
-        name: 'Элаіза Ажэшка',
-        description: 'Яны былі людзьмі адной эпохі. Абое прайшлі праз выпрабаванні Студзеньскага паўстання 1863-64 гадоў. Абое прысвяцілі сябе пісьменніцтву.'
-    }, {
-        id: 8,
-        img: Person1,
-        name: 'Элаіза Ажэшка',
-        description: 'Яны былі людзьмі адной эпохі. Абое прайшлі праз выпрабаванні Студзеньскага паўстання 1863-64 гадоў. Абое прысвяцілі сябе пісьменніцтву.'
-    },
-    {
-        id: 2,
-        img: Person2,
-        name: 'Элаіза Ажэшка',
-        description: 'Яны былі людзьмі адной эпохі. Абое прайшлі праз выпрабаванні Студзеньскага паўстання 1863-64 гадоў. Абое прысвяцілі сябе пісьменніцтву.'
-    },
-    {
-        id: 3,
-        img: Person3,
-        name: 'Элаіза Ажэшка',
-        description: 'Яны былі людзьмі адной эпохі. Абое прайшлі праз выпрабаванні Студзеньскага паўстання 1863-64 гадоў. Абое прысвяцілі сябе пісьменніцтву.'
-    },
-    {
-        id: 4,
-        img: Person4,
-        name: 'Элаіза Ажэшка',
-        description: 'Яны былі людзьмі адной эпохі. Абое прайшлі праз выпрабаванні Студзеньскага паўстання 1863-64 гадоў. Абое прысвяцілі сябе пісьменніцтву.'
-    }
-];
-export const personsListForSlider = [
-    {
-        id: 1,
-        img: Person1,
-        name: 'Элаіза Ажэшка',
-    }, {
-        id: 7,
-        img: Person1,
-        name: 'Элаіза Ажэшка',
-    }, {
-        id: 8,
-        img: Person1,
-        name: 'Элаіза Ажэшка',
-    },
-    {
-        id: 2,
-        img: Person2,
-        name: 'Элаіза Ажэшка',
-    },
-    {
-        id: 3,
-        img: Person3,
-        name: 'Элаіза Ажэшка',
-    },
-    {
-        id: 4,
-        img: Person4,
-        name: 'Элаіза Ажэшка',
-    }
-];
-
-export const MainPage = () => {
+export const MainPage = ({personsList,routesList,workersList,aboutHomePage}) => {
     return (
         <main className="main-page">
             <div className="main-page__image"/>
-            <AboutPage/>
+            <AboutPage aboutHomePage={aboutHomePage}/>
             <Persons personsList={personsList}/>
             <TourRoutes routesList={routesList}/>
             <Persons personsList={personsList}/>
@@ -210,4 +17,36 @@ export const MainPage = () => {
             <AboutWorkers workersList={workersList}/>
         </main>
     );
+};
+
+MainPage.propTypes={
+    personsList: PropTypes.arrayOf(PropTypes.shape({
+        id: PropTypes.number,
+        img: PropTypes.string,
+        name: PropTypes.string,
+        description: PropTypes.string
+    })),
+    routesList: PropTypes.arrayOf(PropTypes.shape({
+        id: PropTypes.number,
+        img: PropTypes.string,
+        name: PropTypes.string,
+        description: PropTypes.string
+    })),
+    workersList: PropTypes.arrayOf(PropTypes.shape({
+        id: PropTypes.number,
+        img: PropTypes.string,
+        name: PropTypes.string,
+        scope: PropTypes.string
+    })),
+    aboutHomePage: PropTypes.arrayOf(PropTypes.shape({
+        id: PropTypes.number,
+        content: PropTypes.string
+    }))
+};
+
+MainPage.defaultProps={
+    personsList: [],
+    routesList: [],
+    workersList: [],
+    aboutHomePage: [],
 };
