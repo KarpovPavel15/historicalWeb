@@ -1,5 +1,5 @@
 import React from 'react'
-import { Header } from 'modules/header';
+import { default as Header } from 'modules/header';
 import { RootRoute } from 'rootRoute';
 
 export const Page = () => {
