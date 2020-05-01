@@ -26,13 +26,15 @@
   }
 }
 
-.person-slider{
+.person-slider {
   width: 380px;
   height: 200px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: red;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+  font-size: 20px;
 }
-
