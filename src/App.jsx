@@ -1,6 +1,20 @@
+import './style.scss'
+
 import React from 'react';
-import {MainPage} from './components/MainPage';
+import { Router } from 'react-router-dom';
+import { createBrowserHistory } from 'history';
+import { Provider } from 'react-redux';
+import { store } from 'store';
+
+import { Page } from 'modules/page';
 
 export const App = () => {
-    return <MainPage/>;
+    const customHistory = createBrowserHistory();
+    return (
+        <Provider store={store}>
+            <Router history={customHistory}>
+                <Page/>
+            </Router>
+        </Provider>
+    )
 };

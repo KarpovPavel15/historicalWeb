@@ -1,0 +1,14 @@
+.main-page {
+  &__image {
+    background-image: url("../../../assets/Grodno_panorama-6r.jpg");
+    height: 1020px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+@media screen and (min-width: 1700px){
+  .main-page__image{
+    background-size: cover;
+  }
+}

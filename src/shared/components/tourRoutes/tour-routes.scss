@@ -1,0 +1,20 @@
+.tour-routes {
+  background: #232323;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.25);
+
+  &__title {
+    padding: 139px 647px 107px 647px;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 57px;
+    color: #FFF9EE;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    padding: 0 252px 200px 256px;
+  }
+}

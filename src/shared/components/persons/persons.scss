@@ -1,0 +1,16 @@
+.persons {
+  padding: 36px 410px 138px 370px;
+
+  &__right-person {
+    justify-content: flex-end;
+  }
+
+  &__right-person, &__left-person {
+    display: flex;
+    margin-bottom: 86px;
+  }
+
+  &__list {
+    display: flex;
+  }
+}

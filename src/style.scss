@@ -1,0 +1,102 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (min-device-width: 420px) and (max-device-width: 1400px) {
+  body {
+    width: fit-content !important;
+  }
+  .tour-routes__title {
+    padding: 139px 0 107px 0 !important;
+    text-align: center;
+  }
+  .tour-routes__list {
+    padding: 0 0 200px 0 !important;
+  }
+
+}
+
+@media screen and (min-device-width: 375px) and (max-device-width: 419px) {
+  body {
+    width: fit-content !important;
+    overflow-x: hidden;
+  }
+  .navigation__rout-link, .navigation__genius-link, .navigation__team-link, .navigation__souvenirs-link {
+    font-size: 19px !important;
+    margin-right: 15px !important;
+  }
+  .user-options__language {
+    font-size: 19px !important;
+  }
+  .tour-routes__title {
+    text-align: center;
+  }
+  .tour-routes__list {
+    padding: 0 182px 200px 171px !important;
+  }
+  .tour-route:first-child {
+    margin-right: 10px !important;
+  }
+  .tour-route {
+    margin-right: 10px !important;
+  }
+  .persons {
+    padding: 140px 370px 147px 400px !important;
+  }
+  .about-workers__title {
+    text-align: center;
+  }
+  .about-page{
+    padding: 138px 280px 146px 290px  !important;
+  }
+  .about-workers__information{
+    padding: 0 0 0 50px
+  }
+}
+
+@media screen and (min-device-width: 320px) and (max-device-width: 374px) {
+  body {
+    width: fit-content !important;
+    overflow-x: hidden;
+  }
+  .navigation__rout-link, .navigation__genius-link, .navigation__team-link, .navigation__souvenirs-link {
+    font-size: 19px !important;
+    margin-right: 15px !important;
+  }
+  .user-options__language {
+    font-size: 19px !important;
+  }
+  .tour-routes__title {
+    text-align: center;
+    padding: 139px 400px 107px 0 !important;
+  }
+  .tour-routes__list {
+    padding: 0 420px 200px 0 !important;
+  }
+  .main-page__image {
+    height: 930px !important;
+  }
+  .tour-route:first-child {
+    margin-right: 10px !important;
+  }
+  .tour-route {
+    margin-right: 10px !important;
+  }
+  .about-workers__information{
+    padding: 0 340px 0 0 !important;
+  }
+  .persons {
+    padding: 140px 550px 147px 200px !important;
+  }
+  .about-workers__title {
+    text-align: center;
+    padding: 139px 400px 107px 0 !important;
+  }
+  .about-page{
+    padding: 138px 560px 146px 140px !important;
+  }
+  .about-page__description{
+    font-size: 19px !important;
+  }
+}
