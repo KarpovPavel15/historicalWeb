@@ -4,7 +4,7 @@
   "description": "epam",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --mode production",
+    "build": "webpack --mode production --config webpack/webpack.config.prod.js",
     "dev": "webpack-dev-server --mode development --progress  --config webpack/webpack.config.dev.js --open --watch "
   },
   "repository": {

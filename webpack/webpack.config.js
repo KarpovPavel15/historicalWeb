@@ -4,6 +4,7 @@ const modules = require('./modules');
 
 module.exports = merge(
     {
+        entry: './src/index.js',
         output: {
             path: utils.resolve('dist'),
             filename: '[name].js',

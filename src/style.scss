@@ -6,6 +6,7 @@ body {
 @media screen and (min-device-width: 420px) and (max-device-width: 1400px) {
   body {
     width: fit-content !important;
+    overflow-x: hidden;
   }
   .tour-routes__title {
     padding: 139px 0 107px 0 !important;
@@ -14,13 +15,28 @@ body {
   .tour-routes__list {
     padding: 0 0 200px 0 !important;
   }
+  .main-page__image {
+    height: 1030px !important;
+  }
+  .about-page__description {
+    font-size: 40px !important;
+  }
+  .persons {
+    padding: 135px 120px 138px 120px !important;
+  }
+  .about-workers__title {
+    text-align: center;
+    padding: 145px 0 75px 0 !important;
+  }
+  .worker:last-child {
+    margin-right: 0 !important;
+  }
 
 }
 
 @media screen and (min-device-width: 375px) and (max-device-width: 419px) {
-  body {
-    width: fit-content !important;
-    overflow-x: hidden;
+  html {
+    width: 1500px !important;
   }
   .navigation__rout-link, .navigation__genius-link, .navigation__team-link, .navigation__souvenirs-link {
     font-size: 19px !important;
@@ -31,9 +47,10 @@ body {
   }
   .tour-routes__title {
     text-align: center;
+    padding: 140px 0 110px 0 !important;
   }
   .tour-routes__list {
-    padding: 0 182px 200px 171px !important;
+    padding: 0 140px 200px 140px !important;
   }
   .tour-route:first-child {
     margin-right: 10px !important;
@@ -42,61 +59,74 @@ body {
     margin-right: 10px !important;
   }
   .persons {
-    padding: 140px 370px 147px 400px !important;
+    padding: 140px !important;
   }
   .about-workers__title {
     text-align: center;
+    padding: 140px 0 75px 0 !important;
   }
-  .about-page{
-    padding: 138px 280px 146px 290px  !important;
+  .about-page {
+    padding: 140px 290px 140px 290px !important;
   }
-  .about-workers__information{
-    padding: 0 0 0 50px
+  .main-page__image {
+    height: 910px !important;
+  }
+  .worker:last-child {
+    margin-right: 0 !important;
   }
 }
 
 @media screen and (min-device-width: 320px) and (max-device-width: 374px) {
-  body {
-    width: fit-content !important;
-    overflow-x: hidden;
-  }
   .navigation__rout-link, .navigation__genius-link, .navigation__team-link, .navigation__souvenirs-link {
-    font-size: 19px !important;
-    margin-right: 15px !important;
+    font-size: 17px !important;
+    margin-right: 20px !important;
   }
   .user-options__language {
     font-size: 19px !important;
   }
   .tour-routes__title {
     text-align: center;
-    padding: 139px 400px 107px 0 !important;
+    padding: 139px 0 107px 0 !important;
   }
   .tour-routes__list {
-    padding: 0 420px 200px 0 !important;
+    justify-content: center;
+    padding: 0 0 50px 0 !important;
+    align-items: center;
+    flex-direction: column;
   }
   .main-page__image {
-    height: 930px !important;
+    height: 590px !important;
   }
-  .tour-route:first-child {
-    margin-right: 10px !important;
+  .tour-route:first-child, .tour-route:first-child {
+    margin-bottom: 50px !important;
   }
   .tour-route {
-    margin-right: 10px !important;
+    margin-right: 0 !important;
+    margin-bottom: 50px !important;
   }
-  .about-workers__information{
-    padding: 0 340px 0 0 !important;
+  .about-workers__information {
+    padding: 0 !important;
   }
   .persons {
-    padding: 140px 550px 147px 200px !important;
+    padding: 140px 40px 147px 40px !important;
   }
   .about-workers__title {
     text-align: center;
-    padding: 139px 400px 107px 0 !important;
+    padding: 140px 0 110px 0 !important;
   }
-  .about-page{
-    padding: 138px 560px 146px 140px !important;
+  .about-page {
+    padding: 100px 40px 100px 40px !important;
   }
-  .about-page__description{
-    font-size: 19px !important;
+  .about-page__title {
+    font-size: 16px !important;
+  }
+  .about-page__description {
+    font-size: 12px !important;
+  }
+  .header__navigation {
+    padding: 0 40px 0 40px !important;
+  }
+  .worker:last-child {
+    margin-right: 0 !important;
   }
 }
