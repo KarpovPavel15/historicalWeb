@@ -78,11 +78,11 @@ body {
 
 @media screen and (min-device-width: 320px) and (max-device-width: 374px) {
   .navigation__rout-link, .navigation__genius-link, .navigation__team-link, .navigation__souvenirs-link {
-    font-size: 17px !important;
-    margin-right: 20px !important;
+    font-size: 15px !important;
+    margin-right: 10px !important
   }
   .user-options__language {
-    font-size: 19px !important;
+    font-size: 15px !important;
   }
   .tour-routes__title {
     text-align: center;
@@ -118,10 +118,10 @@ body {
     padding: 100px 40px 100px 40px !important;
   }
   .about-page__title {
-    font-size: 16px !important;
+    font-size: 36px !important;
   }
   .about-page__description {
-    font-size: 12px !important;
+    font-size: 22px !important;
   }
   .header__navigation {
     padding: 0 40px 0 40px !important;
