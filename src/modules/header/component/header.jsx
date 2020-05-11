@@ -1,11 +1,13 @@
 import './header.scss'
 
 import React, { useState } from 'react';
-import { Logo, Navigation, Sliders } from 'shared/components';
-import { default as UserOptions } from 'modules/userOptions';
 import PropTypes from 'prop-types';
 
-export const Header = ({routesList,personsList,workersList}) => {
+import { Logo, Navigation, Sliders } from 'shared/components';
+import { default as UserOptions } from 'modules/userOptions';
+import { default as HamburgerMenu } from 'modules/hamburgerMenu';
+
+export const Header = ({routesList, personsList, workersList}) => {
 
     const [isActive, setActive] = useState(false);
     const [activeLink, setActiveLink] = useState('');
@@ -23,15 +25,22 @@ export const Header = ({routesList,personsList,workersList}) => {
                     <UserOptions/>
                 </div>
                 <div className="header__slider">
-                    {isActive &&
-                    <Sliders content={activeLink} routesList={routesList} personsList={personsList} workersList={workersList}/>}
+                    {
+                        isActive &&
+                        <Sliders content={activeLink} routesList={routesList} personsList={personsList}
+                                 workersList={workersList}/>
+                    }
                 </div>
+            </div>
+            <div className="header__mobile-area">
+                <Logo/>
+                <HamburgerMenu/>
             </div>
         </header>
     )
 };
 
-Header.propTypes={
+Header.propTypes = {
     personsList: PropTypes.arrayOf(PropTypes.shape({
         id: PropTypes.number,
         img: PropTypes.string,
@@ -49,10 +58,10 @@ Header.propTypes={
         img: PropTypes.string,
         name: PropTypes.string,
         scope: PropTypes.string
-    }))
+    })),
 };
 
-Header.defaultProps={
+Header.defaultProps = {
     personsList: [],
     routesList: [],
     workersList: [],
