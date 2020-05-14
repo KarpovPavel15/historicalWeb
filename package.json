@@ -29,7 +29,8 @@
     "react-router-dom": "^5.0.0",
     "react-scripts": "^3.0.1",
     "react-slick": "latest",
-    "react-scroll": "latest"
+    "react-scroll": "latest",
+    "react-router": "latest"
   },
   "devDependencies": {
     "@babel/core": "^7.4.3",
