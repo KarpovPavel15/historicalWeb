@@ -1,1 +1,1 @@
-export { RouteRoom } from './routeRoom'
+export { default } from './routeRoomContainer'
