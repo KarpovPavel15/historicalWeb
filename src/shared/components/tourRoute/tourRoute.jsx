@@ -10,10 +10,10 @@ export const TourRoute = ({tourInfo, routesForSlider}) => (
             <div className="tour-route__name">{tourInfo.name}</div>
             <div className="tour-route__description">{tourInfo.description}</div>
         </NavLink>
-        : <div className="tour-route-slide">
+        : <NavLink className="tour-route-slide" to={`/routes/${tourInfo.id}`}>
             <img className="tour-route-slide__image" src={tourInfo.img}/>
             <div className="tour-route-slide__name">{tourInfo.name}</div>
-        </div>
+        </NavLink>
 );
 
 TourRoute.propTypes = {

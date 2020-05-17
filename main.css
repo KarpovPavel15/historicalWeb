@@ -4,7 +4,7 @@ body{margin:0;padding:0}@media screen and (min-device-width: 320px) and (max-dev
 
 .logo{width:100px;height:114px;margin-top:50px}
 
-.navigation{margin-left:10px}.navigation__rout-link,.navigation__genius-link,.navigation__team-link,.navigation__souvenirs-link{font-family:'Roboto', sans-serif;font-weight:bold;font-size:23px;text-decoration:none;margin-right:50px;color:#000000}.navigation__rout-link:last-child,.navigation__genius-link:last-child,.navigation__team-link:last-child,.navigation__souvenirs-link:last-child{margin-right:0}.navigation__rout-link:hover,.navigation__genius-link:hover,.navigation__team-link:hover,.navigation__souvenirs-link:hover{color:#0000008f}
+.navigation{margin-left:10px}.navigation__rout-link,.navigation__genius-link,.navigation__team-link,.navigation__souvenirs-link{font-family:'Roboto', sans-serif;font-weight:bold;font-size:23px;text-decoration:none;margin-right:50px;color:#000000;cursor:pointer}.navigation__rout-link:last-child,.navigation__genius-link:last-child,.navigation__team-link:last-child,.navigation__souvenirs-link:last-child{margin-right:0}.navigation__rout-link:hover,.navigation__genius-link:hover,.navigation__team-link:hover,.navigation__souvenirs-link:hover{color:#0000008f}
 
 .persons{padding:36px 410px 138px 370px}.persons__right-person{justify-content:flex-end}.persons__right-person,.persons__left-person{display:flex;margin-bottom:86px}.persons__list{display:flex}
 
@@ -12,19 +12,21 @@ body{margin:0;padding:0}@media screen and (min-device-width: 320px) and (max-dev
 
 .about-page{padding:138px 410px 146px 410px;display:flex;flex-direction:column;align-items:center;box-shadow:0 4px 20px rgba(0,0,0,0.25)}.about-page__title{font-family:"Roboto", sans-serif;font-weight:bold;width:850px;font-size:48px;line-height:57px;color:#000000;text-align:center}.about-page__description{width:885px;margin-top:10px;font-family:Lora, serif;font-style:normal;font-weight:normal;font-size:25px;line-height:160%;color:#252525}
 
-.about-workers{margin-bottom:200px}.about-workers__title{font-family:"Roboto", sans-serif;font-weight:bold;font-size:48px;line-height:57px;color:#232323;padding:144px 657px 74px 657px}.about-workers__information{display:flex;flex-direction:column}.about-workers__first-line,.about-workers__second-line{display:flex;justify-content:center}
+.about-workers{margin-bottom:200px}.about-workers__title{font-family:"Roboto", sans-serif;font-weight:bold;font-size:48px;line-height:57px;text-align:center;color:#232323;padding:144px 657px 74px 657px}.about-workers__information{display:flex;flex-direction:column}.about-workers__first-line,.about-workers__second-line{display:flex;justify-content:center}
 
-.tour-route{margin-right:50px}.tour-route:first-child{margin-right:50px}.tour-route:last-child{margin:0}.tour-route__image{margin-bottom:100px}.tour-route__name,.tour-route__description{font-family:Lora, serif;font-style:normal;font-weight:normal;font-size:24px;line-height:31px;text-align:center;color:#E4E4E4}.tour-route-slide{width:380px;height:200px;display:flex;flex-direction:column;justify-content:center;align-items:center;color:white;font-family:"Roboto", sans-serif;font-weight:normal;font-size:20px}
+.tour-route{text-decoration:none;margin-right:50px}.tour-route:first-child{margin-right:50px}.tour-route:last-child{margin:0}.tour-route__image{margin-bottom:100px}.tour-route__name,.tour-route__description{font-family:Lora, serif;font-style:normal;font-weight:normal;font-size:24px;line-height:31px;text-align:center;color:#E4E4E4}.tour-route-slide{width:380px;height:200px;display:flex;flex-direction:column;justify-content:center;align-items:center;color:white;font-family:"Roboto", sans-serif;font-weight:normal;font-size:20px;text-decoration:none}
 
-.tour-routes{background:#232323;box-shadow:0 4px 24px rgba(0,0,0,0.25)}.tour-routes__title{padding:139px 647px 107px 647px;font-family:"Roboto", sans-serif;font-style:normal;font-weight:bold;font-size:48px;line-height:57px;color:#FFF9EE}.tour-routes__list{display:flex;justify-content:center;padding:0 252px 200px 256px}
+.tour-routes{background:#232323;box-shadow:0 4px 24px rgba(0,0,0,0.25)}.tour-routes__title{padding:139px 647px 107px 647px;font-family:"Roboto", sans-serif;font-style:normal;font-weight:bold;font-size:48px;text-align:center;line-height:57px;color:#FFF9EE}.tour-routes__list{display:flex;justify-content:center;padding:0 252px 200px 256px}
 
 .worker{margin-right:63px}.worker__image{margin-bottom:40px}.worker__scope{margin-bottom:48px}.worker__name,.worker__scope{display:flex;justify-content:center;font-family:Lora, serif;font-style:normal;font-weight:normal;font-size:24px;line-height:31px;text-align:center;color:#000000}.worker-slide{width:380px;height:200px;display:flex;flex-direction:column;justify-content:center;align-items:center;color:white;font-family:"Roboto", sans-serif;font-weight:normal;font-size:20px}
 
 
 
-.main-page__image{background-image:url(./images/Grodno_panorama-6r.jpg);height:1020px;background-size:contain;background-repeat:no-repeat}@media screen and (min-width: 1700px){.main-page__image{background-size:cover}}
-
 .user-options{display:flex;align-items:center}.user-options__language{margin-right:50px;font-family:"Roboto", sans-serif;font-weight:bold;font-size:23px;line-height:28px;text-decoration:none;color:#000000;background:transparent;border:none;outline:none;-moz-appearance:none;-webkit-appearance:none;appearance:none}.user-options__language:hover{cursor:pointer;color:#0000008f}.user-options__language option{font-family:"Roboto", sans-serif;font-weight:bold;font-style:normal;font-size:23px;color:#000000;background-color:#fff9ee}.user-options__main{align-items:center;display:flex}.user-options__main button{background:transparent;border:none;outline:none}.options__search{margin-right:50px}.options__hamburger{margin-left:50px}
 
 .hamburger-menu{display:flex;flex-direction:column;justify-content:end}.hamburger-menu__content{position:absolute;right:15px;top:100px;background-color:rgba(214,94,19,0.9);padding:10px 40px 10px 40px}.hamburger-menu__button{display:flex;padding:10px}.hamburger-menu__slider{position:absolute;right:220px;top:180px;left:0}
+
+.main-page__image{background-image:url(images/Grodno_panorama-6r.jpg);height:1020px;background-size:contain;background-repeat:no-repeat}@media screen and (min-width: 1700px){.main-page__image{background-size:cover}}
+
+.route-room__picture{position:relative;z-index:-2}.route-room__info{padding-left:90px;width:750px;height:152px}.route-room__main-picture{display:flex;align-items:center;flex-direction:column;padding-bottom:202px}.route-room__room-info{display:flex;padding:0 190px 0 190px}.route-room__description{font-family:Rubik, serif;font-style:normal;font-weight:500;font-size:36px;line-height:43px;padding-bottom:30px}.route-room__about-room{font-family:Lora, serif;font-style:normal;font-weight:normal;font-size:24px;line-height:160%;color:#252525}
 

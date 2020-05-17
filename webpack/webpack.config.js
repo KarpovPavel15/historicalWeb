@@ -13,8 +13,7 @@ module.exports = merge(
         resolve: {
             extensions: ['.js', '.jsx', '.json', '.sass', '.scss'],
             modules: [utils.resolve('src'), 'node_modules']
-        },
-        historyApiFallback: true
+        }
     },
     modules
 );
