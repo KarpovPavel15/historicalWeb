@@ -1,5 +1,6 @@
 import './route-room.scss'
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export const RouteRoom = ({roomInfo}) => {
     return (
@@ -20,4 +21,18 @@ export const RouteRoom = ({roomInfo}) => {
             </div>
         </main>
     )
+};
+
+RouteRoom.propTypes = {
+    roomInfo: PropTypes.shape({
+        id: PropTypes.number,
+        mainImg: PropTypes.string,
+        img: PropTypes.string,
+        description: PropTypes.string,
+        aboutRoute: PropTypes.string
+    })
+};
+
+RouteRoom.defaultProps = {
+    roomInfo: {}
 };
