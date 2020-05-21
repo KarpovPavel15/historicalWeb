@@ -11,8 +11,8 @@ import { Select } from 'shared/components';
 export const UserOptions = ({languages}) => {
     return (
         <div className="user-options">
-            <Select className="user-options__language">{languages}</Select>
             <div className="options user-options__main">
+                <Select className="user-options__language">{languages}</Select>
                 <button className="options__search">
                     <img src={search}/>
                 </button>
