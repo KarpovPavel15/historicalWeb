@@ -5,7 +5,7 @@ import { TourRoute } from 'shared/components';
 import PropTypes from 'prop-types';
 
 export const TourRoutes = ({routesList}) => (
-    <div className="tour-routes">
+    <div id="tour-routes" className="tour-routes">
         <h1 className="tour-routes__title">Турыстычныя маршруты</h1>
         <div className="tour-routes__list">
             {

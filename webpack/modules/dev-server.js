@@ -4,12 +4,12 @@ const PORT = 8083;
 module.exports = {
     devServer: {
         clientLogLevel: 'warning',
-        contentBase: 'dist',
+        contentBase: './dist',
         compress: false,
         host: HOST,
         port: PORT,
         open: true,
-        overlay: { warnings: false, errors: true },
+        overlay: {warnings: false, errors: true},
         publicPath: '/',
         historyApiFallback: true,
         hot: true,
