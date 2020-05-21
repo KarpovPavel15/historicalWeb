@@ -22,9 +22,7 @@ export const HamburgerMenu = ({routesList, personsList, workersList}) => {
 
         return (
             <div className="hamburger-menu">
-                <button className="hamburger-menu__button" onClick={openMenu}>
-                    <img src={hamburger}/>
-                </button>
+                <img src={hamburger} onClick={openMenu}/>
                 {
                     isOpen &&
                     <div className="hamburger-menu__content" onMouseLeave={hideSlider}>
