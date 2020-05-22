@@ -8,7 +8,7 @@ module.exports = merge(
         output: {
             path: utils.resolve('dist'),
             filename: '[name].js',
-            publicPath: '/'
+            publicPath: './'
         },
         resolve: {
             extensions: ['.js', '.jsx', '.json', '.sass', '.scss'],

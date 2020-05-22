@@ -9,6 +9,7 @@ module.exports = {
             rootRoute: utils.resolve('src/rootRoute'),
             api: utils.resolve('src/api'),
             utils: utils.resolve('src/utils'),
+            images: utils.resolve('images/'),
         }
     }
 };

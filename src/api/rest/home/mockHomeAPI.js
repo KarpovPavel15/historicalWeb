@@ -1,8 +1,11 @@
 import { mocksAxios } from "../mockAPI";
 import { Route1, Route2, Route3, Route4 } from 'assets/routes';
 import { Worker1, Worker2, Worker3, Worker4, Worker5, Worker6, Worker7 } from 'assets/workers'
-import { Person1, Person2, Person3, Person4 } from 'assets/persones';
-import { RoomImage } from 'assets/room';
+import Person1 from 'assets/person1.png';
+import Person2 from 'assets/person2.png';
+import Person3 from 'assets/person3.png';
+import Person4 from 'assets/person4.png';
+import  { RoomImage } from 'assets/room';
 
 export const mockHomeAPI = {
     getLanguages: () =>
@@ -108,25 +111,25 @@ export const mockHomeAPI = {
                 description: 'Яны былі людзьмі адной эпохі. Абое прайшлі праз выпрабаванні Студзеньскага паўстання 1863-64 гадоў. Абое прысвяцілі сябе пісьменніцтву.'
             }, {
                 id: 8,
-                img: `../${Person3}`,
-                name: 'Элаіза Ажэшка',
-                description: 'Яны былі людзьмі адной эпохі. Абое прайшлі праз выпрабаванні Студзеньскага паўстання 1863-64 гадоў. Абое прысвяцілі сябе пісьменніцтву.'
-            },
-            {
-                id: 2,
-                img: `../${Person4}`,
-                name: 'Элаіза Ажэшка',
-                description: 'Яны былі людзьмі адной эпохі. Абое прайшлі праз выпрабаванні Студзеньскага паўстання 1863-64 гадоў. Абое прысвяцілі сябе пісьменніцтву.'
-            },
-            {
-                id: 3,
                 img: `../${Person1}`,
                 name: 'Элаіза Ажэшка',
                 description: 'Яны былі людзьмі адной эпохі. Абое прайшлі праз выпрабаванні Студзеньскага паўстання 1863-64 гадоў. Абое прысвяцілі сябе пісьменніцтву.'
             },
             {
-                id: 4,
+                id: 2,
                 img: `../${Person2}`,
+                name: 'Элаіза Ажэшка',
+                description: 'Яны былі людзьмі адной эпохі. Абое прайшлі праз выпрабаванні Студзеньскага паўстання 1863-64 гадоў. Абое прысвяцілі сябе пісьменніцтву.'
+            },
+            {
+                id: 3,
+                img: `../${Person3}`,
+                name: 'Элаіза Ажэшка',
+                description: 'Яны былі людзьмі адной эпохі. Абое прайшлі праз выпрабаванні Студзеньскага паўстання 1863-64 гадоў. Абое прысвяцілі сябе пісьменніцтву.'
+            },
+            {
+                id: 4,
+                img: `../${Person4}`,
                 name: 'Элаіза Ажэшка',
                 description: 'Яны былі людзьмі адной эпохі. Абое прайшлі праз выпрабаванні Студзеньскага паўстання 1863-64 гадоў. Абое прысвяцілі сябе пісьменніцтву.'
             }
