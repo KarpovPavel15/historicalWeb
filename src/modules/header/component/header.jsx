@@ -3,9 +3,8 @@ import './header.scss'
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
-import { Logo, Navigation, Sliders } from 'shared/components';
+import { Logo, Navigation, Sidebar, Sliders } from 'shared/components';
 import { default as UserOptions } from 'modules/userOptions';
-import { default as HamburgerMenu } from 'modules/hamburgerMenu';
 
 export const Header = ({routesList, personsList, workersList}) => {
 
@@ -34,7 +33,7 @@ export const Header = ({routesList, personsList, workersList}) => {
             </div>
             <div className="header__mobile-area">
                 <Logo/>
-                <HamburgerMenu/>
+                <Sidebar/>
             </div>
         </header>
     )

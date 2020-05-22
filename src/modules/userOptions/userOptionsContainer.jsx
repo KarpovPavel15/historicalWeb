@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
-import { setLanguageListRequestAction, UserOptions } from 'modules/userOptions';
+import { setLanguageListRequestAction } from 'modules/userOptions';
 import { useDispatch, useSelector } from 'react-redux';
+import { UserOptions } from './component';
 
 export default function UserOptionsContainer() {
     const dispatch = useDispatch();
