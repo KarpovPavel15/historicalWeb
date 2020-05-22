@@ -1,0 +1,44 @@
+.route-room {
+  padding-top: 140px;
+  
+  &__picture {
+    position: relative;
+    z-index: -2;
+  }
+
+  &__info {
+    padding-left: 90px;
+    width: 750px;
+    height: 152px;
+  }
+
+  &__main-picture {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 202px;
+  }
+
+  &__room-info {
+    display: flex;
+    padding: 0 190px 0 190px;
+  }
+
+  &__description {
+    font-family: Rubik, serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 43px;
+    padding-bottom: 30px;
+  }
+
+  &__about-room {
+    font-family: Lora, serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 160%;
+    color: #252525;
+  }
+}

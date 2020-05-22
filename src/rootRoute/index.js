@@ -1,1 +1,1 @@
-export * from './rootRoute'
+export { RootRoute } from './rootRoute'

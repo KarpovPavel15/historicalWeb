@@ -8,7 +8,7 @@ import { store } from 'store';
 
 import { Page } from 'modules/page';
 
-export const App = () => {
+export default function App () {
     const customHistory = createBrowserHistory();
     return (
         <Provider store={store}>

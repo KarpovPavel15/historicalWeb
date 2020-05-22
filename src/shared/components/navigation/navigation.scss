@@ -1,6 +1,10 @@
 .navigation {
   margin-left: 10px;
 
+  &__content{
+    height: 100%;
+  }
+
   &__rout-link, &__genius-link, &__team-link, &__souvenirs-link {
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
@@ -8,6 +12,7 @@
     text-decoration: none;
     margin-right: 50px;
     color: #000000;
+    cursor: pointer;
 
     &:last-child {
       margin-right: 0;
@@ -15,6 +20,10 @@
 
     &:hover {
       color: #0000008f;
+    }
+
+    &.active{
+      color: red;
     }
   }
 

@@ -2,11 +2,10 @@ import './slider.scss'
 
 import React from 'react';
 import Slider from "react-slick";
-import { personsListForSlider, routesListForSlider, workersListForSlider } from 'modules/mainPage';
 import { Person, TourRoute, Worker } from 'shared/components';
 import PropTypes from 'prop-types';
 
-export const Sliders = ({content,routesList,personsList,workersList}) => {
+export const Sliders = ({content, routesList, personsList, workersList}) => {
     let settings = {
         dots: true,
         infinite: false,
@@ -44,16 +43,16 @@ export const Sliders = ({content,routesList,personsList,workersList}) => {
     switch (content) {
         case 'routes':
             return <Slider {...settings}>{routesList.map(element => <TourRoute tourInfo={element}
-                                                                                        key={element.id}
-                                                                                        routesForSlider={true}/>)}</Slider>;
+                                                                               key={element.id}
+                                                                               routesForSlider={true}/>)}</Slider>;
         case 'genius':
             return <Slider {...settings}>{personsList.map(element => <Person person={element}
-                                                                                      key={element.id}
-                                                                                      personForSlider={true}/>)}</Slider>;
+                                                                             key={element.id}
+                                                                             personForSlider={true}/>)}</Slider>;
         case 'team':
             return <Slider {...settings}>{workersList.map(element => <Worker workerInfo={element}
-                                                                                      key={element.id}
-                                                                                      workersForSlider={true}/>)}</Slider>;
+                                                                             key={element.id}
+                                                                             workersForSlider={true}/>)}</Slider>;
         case 'souvenirs':
             return <Slider {...settings}>
                 <div>1</div>
