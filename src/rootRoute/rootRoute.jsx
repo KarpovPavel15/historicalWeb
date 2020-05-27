@@ -8,5 +8,6 @@ export const RootRoute = () => (
     <Switch>
         <Route exact path='/' component={MainPage}/>
         <Route path='/routes/:id' exact component={RouteRoom}/>
+        <Route path='/#/routes/:id' exact component={RouteRoom}/>
     </Switch>
 );
