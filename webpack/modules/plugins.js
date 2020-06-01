@@ -4,7 +4,7 @@ const utils = require('../utils');
 module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
-            template: utils.resolve('./index.html'),
+            template: utils.resolve('src/index.html'),
             historyApiFallback: true
         })
     ]
