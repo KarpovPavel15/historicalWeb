@@ -10,6 +10,7 @@ module.exports = {
             api: utils.resolve('src/api'),
             utils: utils.resolve('src/utils'),
             images: utils.resolve('images/'),
+            dist: utils.resolve('dist/'),
         }
     }
 };
