@@ -14,7 +14,7 @@ export const Sidebar = () => {
 
     return (
         <div className="sidebar">
-            <img className="sidebar__show-button" src={hamburger} onClick={openMenu}/>
+            <img className="sidebar__show-button" src={`/${hamburger}`} onClick={openMenu}/>
             {
                 isOpen &&
                 <div className="sidebar__content">
