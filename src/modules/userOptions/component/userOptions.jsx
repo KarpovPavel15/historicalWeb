@@ -14,10 +14,10 @@ export const UserOptions = ({languages}) => {
             <div className="options user-options__main">
                 <Select className="user-options__language">{languages}</Select>
                 <button className="options__search">
-                    <img src={search}/>
+                    <img src={`/${search}`}/>
                 </button>
                 <button className="options__user">
-                    <img src={userImg}/>
+                    <img src={`/${userImg}`}/>
                 </button>
             </div>
         </div>
