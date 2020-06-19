@@ -1,4 +1,4 @@
-import { actionCreator, requestCreator, successCreator } from 'utils';
+import { actionCreator, requestCreator, successCreator } from '../../../utils';
 
 export const setLanguageListActionType = 'SET_LANGUAGE_LIST';
 export const setLanguageListRequestAction = actionCreator(requestCreator(setLanguageListActionType));

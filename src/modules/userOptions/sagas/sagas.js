@@ -4,7 +4,7 @@ import { setLanguageListSuccessAction } from '../actions';
 
 function* setLanguageSaga() {
     const languages = yield call(API.homeAPI.getLanguages);
-    yield put(setLanguageListSuccessAction(languages.handlers.get[0]))
+    yield put(setLanguageListSuccessAction({array: languages.handlers.get[0][4]}))
 }
 
 export function* sagasUserOptions() {

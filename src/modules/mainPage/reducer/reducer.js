@@ -1,7 +1,8 @@
-const initialState = {
+export const initialState = {
     workersList: [],
     routesList: [],
     personsList: [],
+    aboutHomePage: []
 
 };
 export const reducerMainPage = (state = initialState, action) => {
