@@ -1,11 +1,9 @@
 import { mocksAxios } from "../mockAPI";
-import { Route1, Route2, Route3, Route4 } from 'assets/routes';
-import { Worker1, Worker2, Worker3, Worker4, Worker5, Worker6, Worker7 } from 'assets/workers'
-import Person1 from 'assets/person1.png';
-import Person2 from 'assets/person2.png';
-import Person3 from 'assets/person3.png';
-import Person4 from 'assets/person4.png';
-import  { RoomImage } from 'assets/room';
+import { Worker1, Worker2, Worker3, Worker4, Worker5, Worker6, Worker7 } from '../../../assets/workers';
+import { Route1, Route2, Route3, Route4 } from '../../../assets/routes';
+import { Person1, Person2, Person3, Person4 } from '../../../assets/persones';
+import { RoomImage } from '../../../assets';
+
 
 export const mockHomeAPI = {
     getLanguages: () =>
