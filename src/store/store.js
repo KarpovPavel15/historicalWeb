@@ -7,7 +7,7 @@ import { sagasUserOptions, sagaMainPage } from 'modules';
 
 const sagas = [
     sagasUserOptions,
-    sagaMainPage
+    sagaMainPage,
 ];
 
 export const configureStore = () => {

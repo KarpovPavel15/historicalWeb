@@ -1,7 +1,7 @@
 const initialState = {
     workersList: [],
     routesList: [],
-    personsList: [],
+    aboutHomePage: [],
 
 };
 export const reducerMainPage = (state = initialState, action) => {
@@ -9,7 +9,6 @@ export const reducerMainPage = (state = initialState, action) => {
         case 'SET_MAIN_PAGE_CONTENT_SUCCESS':
             return {
                 ...state,
-                personsList: [...action.personsList],
                 routesList: [...action.routesList],
                 workersList: [...action.workersList],
                 aboutHomePage: [...action.aboutHomePage]

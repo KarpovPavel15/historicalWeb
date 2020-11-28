@@ -17,10 +17,6 @@ export const homeAPI = {
     mockHomeAPI.getWorkersList();
     return instance.get("/");
   },
-  getPersonsList: () => {
-    mockHomeAPI.getPersonsList();
-    return instance.get("/");
-  },
   getAboutHomePage: () => {
     mockHomeAPI.getAboutHomePage();
     return instance.get("/");

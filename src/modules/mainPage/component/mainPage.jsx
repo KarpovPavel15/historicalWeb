@@ -1,21 +1,18 @@
 import './main-page.scss'
 
 import React from 'react'
-import { AboutPage, AboutWorkers, Persons, TourRoutes } from 'shared/components';
+import { AboutPage, AboutWorkers, TourRoutes } from 'shared/components';
 import PropTypes from 'prop-types';
 import rootImg from 'images/Grodno_panorama-6r.jpg';
 
 
-export const MainPage = ({personsList,routesList,workersList,aboutHomePage}) => {
+export const MainPage = ({routesList,workersList,aboutHomePage}) => {
     return (
         <main className="main-page">
             <div className="main-page__image">
-                <img className="main-page__rootImg" src={`/${rootImg}  `}/>
+                <img className="main-page__rootImg" src={`/${rootImg}`}/>
             </div>
             <AboutPage aboutHomePage={aboutHomePage}/>
-            <Persons personsList={personsList}/>
-            <TourRoutes routesList={routesList}/>
-            <Persons personsList={personsList}/>
             <TourRoutes routesList={routesList}/>
             <AboutWorkers workersList={workersList}/>
         </main>

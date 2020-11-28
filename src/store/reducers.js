@@ -3,5 +3,5 @@ import { reducerLanguage,reducerMainPage } from 'modules';
 
 export default combineReducers({
     languages: reducerLanguage,
-    homePageContent: reducerMainPage
+    homePageContent: reducerMainPage,
 });
