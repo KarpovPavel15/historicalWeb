@@ -8,8 +8,8 @@ export const Auth = ({setSignInHandler,setSignUpHandler,onSubmit, textAuth, auth
 
     const submitHandler = () => {
         if(email!=="" && password!==""){
-            onSubmit(email, password);
-            setAuthorizedAfterAuth();
+            let isAuth = onSubmit(email, password);
+            isAuth && setAuthorizedAfterAuth();
         }
     };
 

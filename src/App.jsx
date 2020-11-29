@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Router } from 'react-router-dom';
 import { createBrowserHistory } from 'history';
-import { Provider, useDispatch } from 'react-redux';
+import { Provider } from 'react-redux';
 import { store } from 'store';
 import Modal from 'react-modal';
 import './style.scss';
@@ -21,18 +21,41 @@ export default function App() {
     const [hasAccount, setHasAccount] = useState(false);
     const [isSignIn, setSignIn] = useState(false);
     const [isSignUp, setSignUp] = useState(true);
+    const [isError, setIsError] = useState(false);
     const db = Firebase.database();
-    let [emailForEdit,setEmailForEdit] = useState("");
+    let [emailForEdit, setEmailForEdit] = useState("");
+    const [stateQuestions, setStateQuestions] = useState(false);
 
+    useEffect(() => {
+        let user = localStorage.getItem('user');
+        let currentUser = JSON.parse(user);
+        if (currentUser && currentUser.hasOwnProperty('id')) {
+            currentUser.questionAnswers.map(el => {
+                if (el["Узнать достопримечательности"] === true) {
+                    setAuthorized(true);
+                    setIsAnswer(true)
+                } else if (el["Побывать в церквях"] === true) {
+                    setAuthorized(true);
+                    setIsAnswer(true)
+                } else if (el["Активный отдых"] === true) {
+                    setAuthorized(true);
+                    setIsAnswer(true)
+                } else if (el["Всего и понемножку"] === true) {
+                    setAuthorized(true);
+                    setIsAnswer(true)
+                }
+            })
+        }
+    }, []);
 
     const setAuthorizedAfterAuth = () => setAuthorized(!isAuthorized);
     const setSignInHandler = () => {
         setSignUp(!isSignUp);
-        setSignIn(!isSignIn) ;
+        setSignIn(!isSignIn);
     };
     const setSignUpHandler = () => {
         setSignIn(!isSignIn);
-        setSignUp(!isSignUp)  ;
+        setSignUp(!isSignUp);
     };
 
     const [modalIsOpen, setIsOpen] = useState(true);
@@ -51,22 +74,62 @@ export default function App() {
         signUp: "SignUp",
     };
 
+    const getUsers = email => {
+        const users = db.ref("/users/" + email);
+        users.on('value', elem => elem.val().questionAnswers.map(el => {
+            if (el["Узнать достопримечательности"] === true) {
+                setStateQuestions(true);
+                setIsAnswer(true);
+            } else if (el["Побывать в церквях"] === true) {
+                setStateQuestions(true);
+                setIsAnswer(true);
+            } else if (el["Активный отдых"] === true) {
+                setStateQuestions(true);
+                setIsAnswer(true);
+            } else if (el["Всего и понемножку"] === true) {
+                setStateQuestions(true);
+                setIsAnswer(true);
+            }
+        }));
+        users.on('value', elem => {
+            return localStorage.setItem("user", JSON.stringify({
+                id: elem.val().email,
+                email: elem.val().email,
+                password: elem.val().password,
+                questionAnswers: elem.val().questionAnswers
+            }));
+        });
+    };
+
+
     const signUp = (email, password) => {
-        Firebase.auth().createUserWithEmailAndPassword(email, password).then(() => setHasAccount(true));
+
+        Firebase.auth().createUserWithEmailAndPassword(email, password)
+            .then(function (result) {
+                console.log(result);
+                setHasAccount(true)
+            }).catch(function () {
+            setIsError(true)
+        });
+
         const currentEmail = email.split("@")[0];
-        setEmailForEdit(currentEmail);
-        db.ref("/users/"+ currentEmail).set({
+        isError && setEmailForEdit(currentEmail);
+        db.ref("/users/" + currentEmail).set({
             email: email,
             password: password,
             questionAnswers: [
-                {"Узнать достопримечательности":false},
-                {"Побывать в церквях":false},
-                {"Активный отдых":false},
-                {"Всего и понемножку":false},
-                ]
+                {"Узнать достопримечательности": false},
+                {"Побывать в церквях": false},
+                {"Активный отдых": false},
+                {"Всего и понемножку": false},
+            ]
         });
+        return isError
     };
-    const signIn = (email, password) => Firebase.auth().signInWithEmailAndPassword(email, password);
+    const signIn = (email, password) => {
+        Firebase.auth().signInWithEmailAndPassword(email, password);
+        getUsers(email.split("@")[0]);
+    };
 
     function closeModal() {
         setAuthorized(true);
@@ -74,18 +137,27 @@ export default function App() {
     }
 
     const checkboxHandler = email => {
-        if(isCheckedFirst===false && isCheckedSec===false && isCheckedThird===false && isCheckedFour===false){
+        if (isCheckedFirst === false && isCheckedSec === false && isCheckedThird === false && isCheckedFour === false) {
             console.error("Check someone")
-        }else{
-            db.ref("/users/"+ email).update({
+        } else {
+            db.ref("/users/" + email).update({
                 questionAnswers: [
-                    {"Узнать достопримечательности":isCheckedFirst},
+                    {"Узнать достопримечательности": isCheckedFirst},
                     {"Побывать в церквях": isCheckedSec},
-                    {"Активный отдых":isCheckedThird},
+                    {"Активный отдых": isCheckedThird},
                     {"Всего и понемножку": isCheckedFour},
                 ]
             });
             setIsAnswer(!isAnswer);
+            const users = db.ref("/users/" + email);
+            users.on('value', elem => {
+                return localStorage.setItem("user", JSON.stringify({
+                    id: elem.val().email,
+                    email: elem.val().email,
+                    password: elem.val().password,
+                    questionAnswers: elem.val().questionAnswers
+                }));
+            });
         }
         closeModal()
     };
@@ -103,17 +175,21 @@ export default function App() {
                         // onRequestClose={closeModal}
                     >
                         <div>
-                            { isSignUp && <Auth setSignUpHandler={setSignUpHandler} setSignInHandler={setSignInHandler} hasAccount={hasAccount} onSubmit={signUp} signIn={signIn}
-                                  setAuthorizedAfterAuth={setAuthorizedAfterAuth} textAuth={textAuth.signUp}
-                                  authTo={textAuth.signIn}/>}
-                            { isSignIn && <Auth setSignUpHandler={setSignUpHandler} setSignInHandler={setSignInHandler} hasAccount={hasAccount} onSubmit={signIn} signIn={signUp}
-                                  setAuthorizedAfterAuth={setAuthorizedAfterAuth} textAuth={textAuth.signIn}
-                                  authTo={textAuth.signUp}/>}
+                            {isSignUp && <Auth setSignUpHandler={setSignUpHandler} setSignInHandler={setSignInHandler}
+                                               hasAccount={hasAccount} onSubmit={signUp} signIn={signIn}
+                                               setAuthorizedAfterAuth={setAuthorizedAfterAuth}
+                                               textAuth={textAuth.signUp}
+                                               authTo={textAuth.signIn}/>}
+                            {isSignIn && <Auth setSignUpHandler={setSignUpHandler} setSignInHandler={setSignInHandler}
+                                               hasAccount={hasAccount} onSubmit={signIn} signIn={signUp}
+                                               setAuthorizedAfterAuth={setAuthorizedAfterAuth}
+                                               textAuth={textAuth.signIn}
+                                               authTo={textAuth.signUp}/>}
                         </div>
                     </Modal>
                 }
                 {
-                    isAuthorized && !isAnswer &&
+                    !stateQuestions && isAuthorized && !isAnswer &&
                     <Modal
                         isOpen={modalIsOpen}
                         // onRequestClose={closeModal}
@@ -123,29 +199,26 @@ export default function App() {
                             <tr className="table__elements">
                                 <div>
                                     <th className="table__element">Узнать достопримечательности</th>
-                                    <input type="checkbox" onChange={()=>setIsCheckedFirst(!isCheckedFirst)} defaultChecked={isCheckedFirst}/>
+                                    <input type="checkbox" onChange={() => setIsCheckedFirst(!isCheckedFirst)}
+                                           defaultChecked={isCheckedFirst}/>
                                 </div>
                                 <div>
                                     <th className="table__element">Побывать в церквях/костелах</th>
-                                    <input type="checkbox" onChange={()=>setIsCheckedSec(!isCheckedSec)} defaultChecked={isCheckedSec}/>
+                                    <input type="checkbox" onChange={() => setIsCheckedSec(!isCheckedSec)}
+                                           defaultChecked={isCheckedSec}/>
                                 </div>
                                 <div>
                                     <th className="table__element">Активный отдых</th>
-                                    <input type="checkbox" onChange={()=>setIsCheckedThird(!isCheckedThird)} defaultChecked={isCheckedThird}/>
+                                    <input type="checkbox" onChange={() => setIsCheckedThird(!isCheckedThird)}
+                                           defaultChecked={isCheckedThird}/>
                                 </div>
                                 <div>
                                     <th className="table__element">Всего и понемножку</th>
-                                    <input type="checkbox" onChange={()=>setIsCheckedFour(!isCheckedFour)} defaultChecked={isCheckedFour}/>
+                                    <input type="checkbox" onChange={() => setIsCheckedFour(!isCheckedFour)}
+                                           defaultChecked={isCheckedFour}/>
                                 </div>
-                            </tr >
-                            <button onClick={()=>checkboxHandler(emailForEdit)}>Отправить</button>
-                            {/*{resultRows}*/}
-                            {/*<tfoot>*/}
-                            {/*<tr>*/}
-                            {/*    <td>chosen site name {this.state.site} </td>*/}
-                            {/*    <td>chosen address {this.state.address} </td>*/}
-                            {/*</tr>*/}
-                            {/*</tfoot>*/}
+                            </tr>
+                            <button onClick={() => checkboxHandler(emailForEdit)}>Отправить</button>
                         </div>
                     </Modal>
                 }
